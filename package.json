@@ -1,18 +1,21 @@
 {
-  "name": "discordpinger",
-  "version": "1.0.0",
-  "description": "",
-  "main": "pinger.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "discord",
-    "ping",
-    "pinger",
-    "troll",
-    "bot"
-  ],
-  "author": "JustWolf#7404",
-  "license": "ISC"
+	"name": "discordpinger",
+	"version": "1.0.0",
+	"description": "",
+	"main": "pinger.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"discord",
+		"ping",
+		"pinger",
+		"troll",
+		"bot"
+	],
+	"author": "JustWolf#7404",
+	"license": "ISC",
+	"dependencies": {
+		"discord.js": "^13.3.1"
+	}
 }
