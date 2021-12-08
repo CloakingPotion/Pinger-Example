@@ -43,21 +43,20 @@ Pinger.on("messageCreate", async (message) => {
 			console.log(`Started pinging on: ${user.tag}!`);
 
 			interval = setInterval(async () => {
-				let pingChannel = Pinger.channels.find(
-					(c) => c.name === `${config.channelName}`
-				);
-				if (!pingChannel) {
-					await message.guild
-						.createChannel(`${config.channelName}`)
-						.then((c) => {
-							console.log(
-								`Channel not found. Created new one.\nName: ${c.name}\nID: ${c.id}`
-							);
-							c.send(`<@${user.id}>`);
-						});
-				} else {
-					pingChannel.send(`<@${user.id}>`);
-				}
+				Pinger.channels.fetch(config.channelName).then(async (pingChannel) => {
+					if (!pingChannel) {
+						await message.guild
+							.createChannel(`${config.channelName}`)
+							.then((c) => {
+								console.log(
+									`Channel not found. Created new one.\nName: ${c.name}\nID: ${c.id}`
+								);
+								c.send(`<@${user.id}>`);
+							});
+					} else {
+						pingChannel.send(`<@${user.id}>`);
+					}
+				});
 			}, config.pingInterval);
 		}
 

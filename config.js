@@ -5,7 +5,7 @@ const config = {
 
 	ownerID: "146793113573130240", //Id of bot owner for "ownerOnly" function.
 
-	channelName: "general", //Name of channel, where will be all pings sent.
+	channelName: "918162059852644355", //Name of channel, where will be all pings sent.
 
 	pingInterval: "1000", //Time in ms (miliseconds). 1000 recommended - If 1000ms (1s), bot will send ping every 1000ms (1s).
 
